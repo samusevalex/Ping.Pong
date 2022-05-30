@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="PingPong">
+	<target name="compile">
+		<mkdir dir="build/classes"/>
+		<javac srcdir="src/com/example" destdir="build/classes" includeantruntime="false"/>
+	</target>
+	<target name="run Server" depends="compile">
+		<java classname="com.example.Server" classpath="build/classes"/>
+	</target>
+	<target name="run Client" depends="compile">
+		<java classname="com.example.Client" classpath="build/classes"/>
+	</target>
+</project>
+
+		<!--Запускать несколько одновременных java файлов в Ant.
+		Сейчас запускается Server и ждём пока он завершит работу-->
